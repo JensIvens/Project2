@@ -37,7 +37,7 @@
 	    			<input type="checkbox" id="keep" />
 	   				<label for="keep">I accept the terms and conditions.</label>
 	    		</p>
-	    		<input type="submit" value="Login">
+	    		<input type="submit" value="Register">
 			</form>
 		</div>
 	</section>
