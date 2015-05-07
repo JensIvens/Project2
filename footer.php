@@ -7,6 +7,7 @@
 				<li><a href="#">Jobs</a></li>
 				<li><a href="#">Press</a></li>
 				<li><a href="#">Terms &#38; Privacy</a></li>
+				<li><a href="contact.php">Contact</a></li>
 			</ul>
 			<ul class="footer-list">
 				<li class="footer-title">Discover</li>
