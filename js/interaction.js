@@ -6,6 +6,7 @@ $(document).ready(function(){
   // FOUND A LOCATION
     function success(pos, blocked) 
     {
+    // MAP INDEX
         var crd = pos.coords;
         var lon = crd.longitude;
         var lat = crd.latitude;
@@ -23,7 +24,7 @@ $(document).ready(function(){
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(mapCanvas, mapOptions)
-      
+        
         var iconBase = '../images/';
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(lat, lon),
@@ -31,7 +32,31 @@ $(document).ready(function(){
             title: 'You are here!',
             icon: iconBase + 'marker_map.png'
         });
-
+    
+      google.maps.event.addDomListener(window, 'load');
+    
+    // MAP DISCOVER
+      var mapDiscover = document.getElementById('map-discover');
+        
+        var mapOptionsDiscover = {
+          center: new google.maps.LatLng(lat, lon),
+          zoom: 12,
+          draggable: false,
+          disableDoubleClickZoom: true,
+          disableDefaultUI: true,
+          zoomControl: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var mapDiscover = new google.maps.Map(mapDiscover, mapOptionsDiscover)
+        
+        var iconBase = '../images/';
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(lat, lon),
+            map: mapDiscover,
+            title: 'You are here!',
+            icon: iconBase + 'marker_map.png'
+        });
+    
       google.maps.event.addDomListener(window, 'load');
     };
 
