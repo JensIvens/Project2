@@ -149,7 +149,6 @@ body {
 	height: 400px;
 	pointer-events: none;
 }
-
 #teaser ul
 {
 	width: 100%;
@@ -763,6 +762,10 @@ a.cta-discover:hover
 	float:left;
 	margin-top: 10px;
 	margin-left: 5px;
+}
+.discover-map
+{
+	margin-top: 60px;
 }
 @media screen and (min-width: 660px) {
 	header

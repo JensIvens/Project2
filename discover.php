@@ -14,7 +14,7 @@
 		include('nav.php');
 	 ?>
 	 
-	<section id="map-home">
+	<section id="map-home" class="discover-map">
 
 	</section>
 		
@@ -56,7 +56,7 @@
 				</li>
 				<li class="discover-list-li">
 					<a href="#">
-						<img src="images/teaser1.png" />
+						<img src="images/teaser4.png" />
 						<div class="discover-banner">
 	 						<img class="discover-marker" src="images/marker_map.png">
 	 						<p class="discover-name">Tony</p>
@@ -66,7 +66,7 @@
 				</li>
 				<li class="discover-list-li">
 					<a href="#">
-						<img src="images/teaser2.png" />
+						<img src="images/teaser5.png" />
 						<div class="discover-banner">
 							<img class="discover-marker" src="images/marker_map.png">
 							<p class="discover-name">Julien</p>
@@ -76,7 +76,7 @@
 				</li>
 				<li class="discover-list-li">
 					<a href="#">
-						<img src="images/teaser3.png" />
+						<img src="images/teaser6.png" />
 						<div class="discover-banner">
  							<img class="discover-marker" src="images/marker_map.png">
  							<p class="discover-name">Greg</p>
