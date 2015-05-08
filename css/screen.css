@@ -711,6 +711,10 @@ a.cta-discover:hover
 	border:0px;
 	margin-bottom: 0px;
 }
+.content ul li.discover-list-li a:hover .discover-banner p
+{
+	text-decoration: underline;
+}
 .content ul li.discover-list-li img
 {
 	width: 100%;
@@ -739,7 +743,7 @@ a.cta-discover:hover
 {
   	padding-top: 15px;
   	display: block;
-  	width: 40%;
+  	width: 25%;
   	float: left;
   	padding-left: 10px;
 }
@@ -874,5 +878,51 @@ a.cta-discover:hover
 	.content p
 	{
 		padding-left: 75px;
+	}
+	.filters
+	{
+		width: 25%;
+		float: left;
+	}
+	.filters span
+	{
+		width: 100%;
+		margin: 0px;
+		border-radius: 0px;
+		cursor: text;
+	}
+	.filters span:hover
+	{
+		background-color: #f93405;
+	}
+	.filters span i
+	{
+		display: none;
+	}
+	.content
+	{
+		width: 75%;
+		margin-left: 25%;
+		margin-top: -51px;
+	}
+	.content ul.discover-list li.discover-list-li
+	{
+		width: 50%;
+		min-width: 0px;
+		float: left;
+		max-width: 100%;
+		max-height: 316px;
+	}
+	.content ul.discover-list li.discover-list-li img
+	{
+		max-height: 316px;
+	}
+	.content ul.discover-list li.discover-list-li .discover-banner p.discover-price
+	{
+		width: 15%;
+	}
+	.content
+	{
+		margin-bottom: 25px;
 	}
 }
