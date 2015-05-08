@@ -570,10 +570,19 @@ label:hover:before
 }
 aside.nav-sec
 {
+	width: 180px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 95px;
-	border-right:1px solid #555;
-	width: 15%;
+	margin-bottom: 25px;
+}
+aside.nav-sec ul li
+{
+	display: block;
+	margin-left: 10px;
+	margin-right: 10px;
 	float: left;
+	margin-bottom: 25px;
 }
 aside.nav-sec a:link,
 aside.nav-sec a:active,
@@ -599,18 +608,13 @@ aside.nav-sec a.aside-active
 	font-weight: bold;
 	color: #555;
 	margin-bottom: 25px;
-}
-.content
-{
-	float: left;
-	margin-top: -70px;
 	text-align: center;
-	width: 85%;
-	margin-left: 15%;
+	clear: both;
 }
 .content p
 {
-	padding-left: 75px;
+	padding-left: 5px;
+	padding-right: 5px; 
 	text-align: left;
 	line-height: 1.2;
 	margin-bottom: 25px;
@@ -622,17 +626,17 @@ aside.nav-sec a.aside-active
 	float: left;
 	border:1px solid #dce0e0;
 	margin-left: 75px;
-	margin-bottom: 35px;
+	margin-bottom: 50px;
 	background-color: white;
 }
 .content ul li i
 {
 	text-align: left;
-  	font-size: 45pt;
+  	font-size: 35pt;
   	color: #f93405;
   	float: left;
-  	margin-left: 25px;
-  	padding-top: 25px;
+  	margin-left: 35px;
+  	padding-top: 35px;
   	padding-bottom: 25px;
 }
 .content ul li p.about-title
@@ -738,5 +742,29 @@ aside.nav-sec a.aside-active
 	{
 		padding-left:  15px;
 		padding-right: 15px;
+	}
+	aside.nav-sec
+	{
+		width: 15%;
+		margin-left: 0px;
+		margin-top: 95px;
+	}
+	aside.nav-sec ul li
+	{
+		float: none;
+		margin-bottom: 0px;
+		margin-left: 0px;
+	}
+	.content
+	{
+		float: left;
+		margin-top: -85px;
+		text-align: center;
+		width: 85%;
+		margin-left: 15%;
+	}
+	.content p
+	{
+		padding-left: 75px;
 	}
 }
