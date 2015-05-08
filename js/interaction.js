@@ -16,7 +16,7 @@ $(document).ready(function(){
         
         var mapOptions = {
           center: new google.maps.LatLng(lat, lon),
-          zoom: 12,
+          zoom: 14,
           draggable: false,
           disableDoubleClickZoom: true,
           disableDefaultUI: true,
@@ -34,30 +34,7 @@ $(document).ready(function(){
         });
     
       google.maps.event.addDomListener(window, 'load');
-    
-    // MAP DISCOVER
-      var mapDiscover = document.getElementById('map-discover');
-        
-        var mapOptionsDiscover = {
-          center: new google.maps.LatLng(lat, lon),
-          zoom: 12,
-          draggable: false,
-          disableDoubleClickZoom: true,
-          disableDefaultUI: true,
-          zoomControl: false,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var mapDiscover = new google.maps.Map(mapDiscover, mapOptionsDiscover)
-        
-        var iconBase = '../images/';
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(lat, lon),
-            map: mapDiscover,
-            title: 'You are here!',
-            icon: iconBase + 'marker_map.png'
-        });
-    
-      google.maps.event.addDomListener(window, 'load');
+
     };
 
 
@@ -65,6 +42,7 @@ $(document).ready(function(){
     function error(err) 
     {
         document.getElementById("map-home").innerHTML = "Bad luck! Your browser doesn't support geolocation.";
+        document.getElementById("map-discover").innerHTML = "Bad luck! Your browser doesn't support geolocation.";
     };
 
 
