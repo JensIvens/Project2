@@ -54,6 +54,7 @@
 				</div>
 			</li>
 		</ul>
+		<a href="discover.php" class="cta-discover">Discover our bikes!</a>
 	</section>
 	<section id="how">
 		<h3>How does it work?</h3>
