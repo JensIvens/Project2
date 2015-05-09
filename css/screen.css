@@ -389,9 +389,8 @@ h6
 	margin-left: auto;
 	margin-right: auto;
 	background-color: white; 
-	margin-bottom: 45px;
 	position: relative;
-	top: 120px;
+	top: 90px;
 	padding-bottom: 25px;
 }
 .loginbox .register
@@ -540,6 +539,10 @@ label:hover:before
 	margin-right: auto;
 	margin-left:auto;
 
+}
+.loginbox form [type="submit"]:hover
+{
+	background-color: #fb5c36;
 }
 .forgot
 {
