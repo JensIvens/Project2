@@ -917,12 +917,15 @@ a.cta-discover:hover
 		position: absolute;
 		right: 0px;
 	}
-	header img
+	header nav a img
 	{
-		width: 15%;
-		float: left;
-		margin-top: 18px;
-	}
+		position: absolute;
+  		z-index: 9999999;
+  		top: 0px;
+  		width: 135px;
+  		margin-top: 20px;	
+  		margin-left: 0px;
+  	}
 	header nav ul li a:link,
 	header nav ul li a:active,
 	header nav ul li a:visited
