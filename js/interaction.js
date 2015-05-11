@@ -53,10 +53,9 @@ $(document).ready(function(){
 
 
   // FILTERSLIST DISPLAY 
-  
-
-   
+/* 
   $('#filters-display').on('click', function(){
     $('#filterlist').slideToggle();
   });
+*/
 });
