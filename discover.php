@@ -108,6 +108,8 @@
 					</a>
 				</li>
 			</ul>
+			&nbsp;
+			<a href="#" class="morebikes">More bikes?</a>
 		</div>
 	
 	<?php 

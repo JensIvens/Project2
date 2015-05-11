@@ -803,6 +803,7 @@ a.cta-discover:hover
 	background-color: none;
 	border:0px;
 	margin-bottom: 0px;
+	background-color: #f5f5f5;
 }
 .content ul li.discover-list-li a:hover .discover-banner p
 {
@@ -860,6 +861,27 @@ a.cta-discover:hover
 .discover-map
 {
 	margin-top: 60px;
+}
+.morebikes:link,
+.morebikes:active,
+.morebikes:visited
+{
+	clear: both;
+  	background-color: #f93405;
+  	color: white;
+  	font-size: 16pt;
+  	padding: 20px 15px;
+  	display: block;
+  	border-radius: 6px;
+  	margin-right: auto;
+  	margin-left: auto;
+  	width: 45%;
+  	text-align: center;
+  	margin-bottom: 15px;
+}
+.morebikes:hover
+{
+	background-color: #fb5c36;
 }
 @media screen and (min-width: 660px) {
 	header
