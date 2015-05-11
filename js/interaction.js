@@ -49,4 +49,14 @@ $(document).ready(function(){
 
   // RESPONSIVE MENU
   $('#menu').slicknav();
+
+
+
+  // FILTERSLIST DISPLAY 
+  
+
+   
+  $('#filters-display').on('click', function(){
+    $('#filterlist').slideToggle();
+  });
 });

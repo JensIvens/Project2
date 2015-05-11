@@ -613,6 +613,10 @@ aside.nav-sec a.aside-active
 	text-align: center;
 	clear: both;
 }
+.content
+{
+	z-index: 9999;
+}
 .content p
 {
 	padding-left: 5px;
@@ -682,6 +686,10 @@ a.cta-discover:hover
 {
 	background-color: #fb5c36;
 }
+.filters
+{
+	z-index: 1;
+}
 .filters span
 {
 	display: block;
@@ -690,7 +698,8 @@ a.cta-discover:hover
 	margin-right: auto;
 	padding: 10px;
 	font-size: 12pt;
-	border-radius: 4px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
 	margin-top: 15px;
 	cursor: pointer;
 	background-color: #f93405;
@@ -700,6 +709,88 @@ a.cta-discover:hover
 {
 	text-align: right;
 	width: 80%;
+}
+#filterlist
+{
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	border:1px solid #f93405;
+	padding-left: 9px;
+	padding-right: 9px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+#filterlist ul li
+{
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+#filterlist ul li p
+{
+	float: left;
+	margin-right: 20px;
+	min-width: 65px;
+}
+.filterlist ul li form [type="text"]
+{
+	background: white;
+	border: 1px solid #f93405;
+	font-size: 12pt;
+	border-radius: 4px;
+	font-family: 'Karla';
+	margin-top: -3px;
+}
+#filterlist ul li input[type='range'] 
+{
+	-webkit-appearance: none;
+	border-radius: 5px;
+	box-shadow: inset 0 0 5px #333;
+	background-color: #999;
+	height: 10px;
+	vertical-align: middle;
+}
+#filterlist ul li input[type='range']::-moz-range-track {
+	-moz-appearance: none;
+	border-radius: 5px;
+	box-shadow: inset 0 0 5px #333;
+	background-color: #999;
+	height: 10px;
+}
+#filterlist ul li input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	border-radius: 20px;
+	background-color: #FFF;
+	box-shadow:inset 0 0 10px rgba(000,000,000,0.5);
+	border: 1px solid #999;
+	height: 20px;
+	width: 20px;
+}
+#filterlist ul li input[type='range']::-moz-range-thumb {
+	-moz-appearance: none;
+	border-radius: 20px;
+	background-color: #FFF;
+	box-shadow:inset 0 0 10px rgba(000,000,000,0.5);
+	border: 1px solid #999;
+	height: 20px;
+	width: 20px;
+}
+#filterlist ul li .btnsearch
+{
+	background-color: #f93405;
+  	color: white;
+  	font-size: 16pt;
+  	height: 40px;
+  	border-radius: 6px;
+  	cursor: pointer;
+  	margin-right: auto;
+  	margin-left: auto;
+  	width: 80%;
+  	border:0px;
+}
+#filterlist ul li .btnsearch:hover
+{
+	background-color: #fb5c36;
 }
 .filters span:hover
 {
@@ -896,6 +987,7 @@ a.cta-discover:hover
 		margin: 0px;
 		border-radius: 0px;
 		cursor: text;
+		padding-right: 0px;
 	}
 	.filters span:hover
 	{
@@ -909,7 +1001,12 @@ a.cta-discover:hover
 	{
 		width: 75%;
 		margin-left: 25%;
-		margin-top: -51px;
+		margin-top: -52px;
+	}
+	.content ul.discover-list
+	{
+		margin-top: -148px;
+		z-index: 999999;
 	}
 	.content ul.discover-list li.discover-list-li
 	{
@@ -930,5 +1027,11 @@ a.cta-discover:hover
 	.content
 	{
 		margin-bottom: 25px;
+	}
+	#filterlist
+	{
+		width: 100%;
+		border:none;
+		display: block;
 	}
 }
