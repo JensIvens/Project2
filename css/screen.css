@@ -893,6 +893,20 @@ a.cta-discover:hover
 {
 	background-color: #fb5c36;
 }
+#bikepicture
+{
+	background-image: url('../images/teaser1.png');
+	width: auto;
+	background-position: center center;
+	height: 400px;
+	background-repeat: no-repeat;
+	margin-top: 60px;
+}
+ul.aboutlist li
+{
+	float:left;
+	max-width: 305px;
+}
 @media screen and (min-width: 660px) {
 	header
 	{

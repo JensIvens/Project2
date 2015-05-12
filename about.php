@@ -36,7 +36,7 @@
 				and a growing community of users, 'ProjectName' is the easiest way for people 
 				to monetize their bike and showcase it to an audience of millions.
 			</p>
-			<ul>
+			<ul class='aboutlist'>
 				<li>
 					<i class="fa fa-users"></i>
 					<p class="about-title">Bikers</p>
