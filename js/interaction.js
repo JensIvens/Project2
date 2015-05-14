@@ -66,4 +66,13 @@ $(document).ready(function(){
   });
 
   $('#startdate').val(new Date().toDateInputValue());
+
+
+
+  $('.btnbook').on('click', function(){
+    $('.book-bike').slideToggle(function(){
+      $('.btnbook').css('border-top-left-radius', '0px');
+      $('.btnbook').css('border-top-right-radius', '0px');
+    });
+  });
 });
