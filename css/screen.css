@@ -703,9 +703,13 @@ a.cta-discover:hover
 {
 	display: block;
 	width: 85%;
+	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 	font-size: 12pt;
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
@@ -1054,6 +1058,7 @@ ul.aboutlist li
 		border-radius: 0px;
 		cursor: text;
 		padding-right: 0px;
+		padding-left: 0px;
 	}
 	.filters span:hover
 	{
@@ -1067,7 +1072,7 @@ ul.aboutlist li
 	{
 		width: 75%;
 		margin-left: 25%;
-		margin-top: -52px;
+		margin-top: -76px;
 	}
 	.content ul.discover-list
 	{
