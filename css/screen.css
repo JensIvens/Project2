@@ -917,6 +917,7 @@ ul.aboutlist li
 {
 	float:left;
 	max-width: 305px;
+	margin-left: 5px;
 }
 @media screen and (min-width: 660px) {
 	header
@@ -1098,5 +1099,9 @@ ul.aboutlist li
 		width: 100%;
 		border:none;
 		display: block;
+	}
+	ul.aboutlist li
+	{
+		margin-left: 75px;
 	}
 }
