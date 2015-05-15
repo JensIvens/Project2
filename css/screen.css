@@ -990,6 +990,15 @@ ul.aboutlist li
 	background-color: white;
 	display: none;
 }
+.book-bike ul li
+{
+	border:0px;
+	margin-left: 0px;
+}
+.book-bike ul li p
+{
+	margin-bottom: 5px;
+}
 .book-bike ul li input.bookbike
 {
 	background-color: #f93405;
@@ -1040,6 +1049,28 @@ ul.aboutlist li
 .content a.btnbook:hover
 {
 	background-color: #fb5c36;
+}
+#profile{
+	padding-top: 20px;
+	width: 100%;
+	max-width: 1020px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+}
+#profile img
+{
+	display: block;
+	width: 90px;
+	border-radius: 45px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#profile h2
+{
+	text-align: center;
+	font-size: 13pt;
+	font-weight: bold;
 }
 @media screen and (min-width: 660px) {
 	header
@@ -1226,5 +1257,92 @@ ul.aboutlist li
 	ul.aboutlist li
 	{
 		margin-left: 75px;
+	}
+	 .content-bike
+	{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0px;
+		width: 100%;
+		max-width: 1020px; 
+		float: none;
+	}
+	.bike-details .owner
+	{
+		min-height: 110px;
+	}
+	.bike-details .owner img
+	{
+		margin-left: 10px;
+		float: left;
+		clear: both;
+	}
+	.bike-details .owner p.bike-details-name-owner
+	{
+		text-align: center;
+		margin-left: 10px;
+		padding-left: 0px;
+		display: block;
+		width: 80px;
+		float: left;
+		clear: both;
+		padding-right: 0px;
+	}
+	.bike-details .owner h4
+	{
+		width: 50%;
+		margin-left: 90px;
+		text-align: left;
+		padding-left: 100px;
+		font-size: 16pt;
+	}
+	.bike-details .owner p.bike-location
+	{
+		width: 50%;
+		margin-left: 90px;
+		text-align: left;
+		padding-left: 100px;
+	}
+	.bike-details .owner .bike-review-stars
+	{
+		margin-left: 190px;
+	}
+	.bike-details .bike-details-about h4
+	{
+		text-align: left;
+		padding-left: 10px;
+		max-width: 695px;
+	}
+	.bike-details-about p
+	{
+		text-align: left;
+		padding-left: 10px;
+		padding-right: 60px;
+		max-width: 625px;
+	}
+	.content-bike .btnbook
+	{
+		display: none;
+	}
+	.book-bike
+	{
+		display: block;
+		max-width: 315px;
+		margin: 0px;
+		border:0px;
+		position: inherit;
+		float: right;
+		margin-top: -100px;
+		text-align: left;
+		padding-left: 5px;
+	}
+	.book-bike #book-bike-details ul li
+	{
+		margin-bottom: 15px;
+	}
+	.book-bike #book-bike-details ul li p
+	{
+		text-align: left;
+		padding-left: 5px;
 	}
 }

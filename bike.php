@@ -18,34 +18,8 @@
 		<a href="images/teaser1.png" data-lightbox="image-1" data-title="Teaser 1">Image</a>
  	</section>
 
-		
-	<aside class="book-bike">
-		<span id="book-bike-title">
-			Book:
-		</span>
-		<div id="book-bike-details">
-			<ul>
-				<li>
-					<p>From:</p>
-					<form>
-					<input type="date" id="startdate">
-				</li>
-				<li>
-					<p>Until:</p>
-					<input type="date" id="enddate">	
-				</li>
-				<li>
-					<p>Price: &#8364; 15</p>				
-				</li>
-				<li>
-					<input type='submit' value="Book!" class="bookbike">
-					</form>
-				</li>
-			</ul>
-		</div>
-	</aside>
 
-	<div class="content">
+	<div class="content content-bike">
 		<a href="#" onclick="return false;" class="btnbook"> Request to book</a>
 		<div class="bike-details">
 			<div class="owner">
@@ -60,6 +34,31 @@
 					<i class="fa fa-star"></i>
 					<i class="fa fa-star-half-o"></i>	
 				</div>
+				<aside class="book-bike">
+					<span id="book-bike-title">
+						Book:
+					</span>
+					<div id="book-bike-details">
+						<ul>
+							<li>
+								<p>From:</p>
+								<form>
+								<input type="date" id="startdate">
+							</li>
+							<li>
+								<p>Until:</p>
+								<input type="date" id="enddate">	
+							</li>
+							<li>
+								<p>Price: &#8364; 15</p>				
+							</li>
+							<li>
+								<input type='submit' value="Book!" class="bookbike">
+								</form>
+							</li>
+						</ul>
+					</div>
+				</aside>
 			</div>
 			<div class="bike-details-about">
 				<h4>About:</h4>
