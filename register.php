@@ -13,9 +13,6 @@
 			$u->Email = $_POST['email'];
 			$u->Password = $_POST['password'];
 			$u->Save();
-			session_start();
-			$_SESSION['email'] = $u->Email;
-			$_SESSION['loggedin'] = true;
 			Header ('Location: login.php');
 		} 
 		catch (Exception $e) 
@@ -42,12 +39,6 @@
 	
 	<section id="banner">
 		<div class="loginbox register">
-			<?php 
-				if(isset($error))
-				{
-					echo "<p class='error'>$error</p>";
-				}
-			?>
 			<p>Register</p>
 			<?php 
 				if(isset($error))

@@ -1138,6 +1138,13 @@ ul.aboutlist li
 {
 	text-decoration: underline;
 }
+p.error
+{
+	color: #f93405;
+	font-weight: normal;
+	font-size: 12pt;
+	padding-top: 0px;
+}
 @media screen and (min-width: 660px) {
 	header
 	{
