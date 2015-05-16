@@ -13,7 +13,80 @@
  		echo $ownerID;
 		$userName = $user->getAllInformation($ownerID);
 	
-		
+		if(!empty($_POST['profileupdate']))
+		{
+			echo('submit!');
+			include_once("classes/UserInformation.class.php");
+			try 
+			{
+				$u = new UserInformation();
+				$u->FirstName = $_POST['firstname'];
+				$u->LastName = $_POST['lastname'];
+				$u->Sex = $_POST['usersex'];
+				$u->Email = $_POST['email'];
+				$u->Phone = $_POST['phone'];
+				$u->Street = $_POST['street'];
+				$u->Postal = $_POST['postal'];
+				$u->City = $_POST['city'];
+				$u->Description = $_POST['describe'];
+				$u->UserID = $_SESSION['userid'];
+				$u->Save();
+/*				Header ('Location: profile.php');
+*/			
+
+
+
+				$target_dir = "images/" . $ownerID . "/";
+				$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+				$uploadOk = 1;
+				$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+				// Check if image file is a actual image or fake image
+				if(isset($_POST["submit"])) {
+				    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+				    if($check !== false) {
+				        echo "File is an image - " . $check["mime"] . ".";
+				        $uploadOk = 1;
+				    } else {
+				        echo "File is not an image.";
+				        $uploadOk = 0;
+				    }
+				}
+				// Check if file already exists
+				if (file_exists($target_file)) {
+				    echo "Sorry, file already exists.";
+				    $uploadOk = 0;
+				}
+				// Check file size
+				if ($_FILES["fileToUpload"]["size"] > 500000) {
+				    echo "Sorry, your file is too large.";
+				    $uploadOk = 0;
+				}
+				// Allow certain file formats
+				if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+				&& $imageFileType != "gif" ) {
+				    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+				    $uploadOk = 0;
+				}
+				// Check if $uploadOk is set to 0 by an error
+				if ($uploadOk == 0) {
+				    echo "Sorry, your file was not uploaded.";
+				// if everything is ok, try to upload file
+				} else {
+				    
+				    $temp = explode(".",$_FILES["fileToUpload"]["name"]);
+					$newfilename = "logo." . end($temp);
+					move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "images/".$ownerID ."/" . $newfilename);
+				}
+
+
+
+
+			} 
+			catch (Exception $e) 
+			{
+				$error = $e->getMessage();	
+			}
+		}
  	}
 
 
@@ -34,7 +107,7 @@
 	?>
 	 
 	<section id="profile">
-		<img src="images/profile.jpg">
+		<img src="images/<?php echo $ownerID . '/' ?>logo.jpg">
 		<?php 
 			foreach ($userName as $userInfo) { ?>
 				<h2><?php echo ucfirst($userInfo['userfirstname']); ?></h2>
@@ -45,22 +118,28 @@
 			<li class="profile-welcome">
 				Welcome <?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userfirstname']);} ?>!
 				<p>You can change your personal information below</p>
+				<?php 
+					if(isset($error))
+					{
+						echo "<p class='error'>$error</p>";
+					}
+				?>
 			</li>
 			<li>
-				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
 
 				<p class="infolabel">First Name:</p>
-				<input type="text" name="firstname" placeholder="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userfirstname']);} ?>" required>
+				<input type="text" name="firstname" placeholder="First Name" value="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userfirstname']);} ?>" >
 			</li>
 			<li>
 				<p class="infolabel">Last Name:</p>
-				<input type="text" name="firstname" placeholder="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userlastname']);} ?>" required>
+				<input type="text" name="lastname" placeholder="Last Name" value="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userlastname']);} ?>">
 			</li>
 			<li>
 				<p class="infolabel">I am:</p>
 				<select id="user_sex" name="usersex">
-					<option selected="selected">Gender</option>
-					<option value="male">Male</option>
+					<option>Gender</option>
+					<option value="male" selected="selected">Male</option>
 					<option value="female">Female</option>
 				</select>
 			</li>
@@ -145,27 +224,33 @@
 			</li>
 			<li>
 				<p class="infolabel">Email:</p>
-				<input type="email" placeholder="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['useremail']);} ?>" name="email" required>
+				<input type="email" placeholder="Email" value="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['useremail']);} ?>" name="email" >
 			</li>
 			<li>
 				<p class="infolabel">Phone number:</p>
-				<input type="tel" name="phone" placeholder="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userphone']);} ?>"/>
+				<input type="tel" name="phone" placeholder="Phone number" value="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userphone']);} ?>" />
 			</li>
 			<li>
 				<p class="infolabel">Street + number:</p>
-				<input type="text" name="street" placeholder="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userstreet']);} ?>"/>
+				<input type="text" name="street" placeholder="Street + number" value="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userstreet']);} ?>" />
 			</li>
 			<li>
 				<p class="infolabel">Postal code:</p>
-				<input type="number" name="postal" placeholder="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userpostalcode']);} ?>"/>
+				<input type="text" name="postal" placeholder="Postal code" value="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userpostalcode']);} ?>" />
 			</li>
 			<li>
 				<p class="infolabel">City:</p>
-				<input type="number" name="city" placeholder="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['usercity']);} ?>"/>
+				<input type="text" name="city" placeholder="City" value="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['usercity']);} ?>" />
 			</li>
 			<li>
 				<p class="infolabel">Describe yourself:</p>
-				<textarea cols="40" rows="5" name="describe" placeholder="<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userdescribe']);} ?>"></textarea>
+				<textarea cols="40" rows="5" name="describe" placeholder="Description">
+					<?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userdescribe']);} ?>
+				</textarea>
+			</li>
+			<li>
+				<p class="infolabel">Change profilepicture:</p>
+				<input type="file" name="fileToUpload" id="fileToUpload">
 			</li>
 			<li>
 				<input type="submit" name="profileupdate" value="Submit!" class="submitbutton">
