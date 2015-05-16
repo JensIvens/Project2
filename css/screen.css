@@ -1094,6 +1094,7 @@ ul.aboutlist li
 {
 	padding: 15px 5px;
 	border-bottom: 1px solid #dce0e0;
+	background-color: white;
 }
 #profile ul li.profile-welcome
 {
@@ -1103,7 +1104,7 @@ ul.aboutlist li
 
 }
 #profile ul li a:link,
-#profile ul li a:active
+#profile ul li a:active,
 #profile ul li a:visited
 {
 	color:#f93405;
@@ -1144,6 +1145,93 @@ p.error
 	font-weight: normal;
 	font-size: 12pt;
 	padding-top: 0px;
+}
+ul li.profile-welcome p
+{
+	color: #565A46;
+	font-weight: normal;
+}
+#profile ul li p.infolabel
+{
+	padding-bottom: 10px;
+}
+#profile ul li input
+{
+	width: 75%;
+	margin-bottom: 10px;
+	max-width: 350px;
+	height: 35px;
+	border-radius: 2px;
+	padding:6px 12px;
+	display: block;
+	margin-bottom: 10px;
+	color: #555;
+	background-color: #fff;
+	border:1px solid #ccc;
+	font-family: 'Karla' ,'Century Gothic', sans-serif;
+}
+#profile ul li textarea
+{
+	width: 75%;
+	margin-bottom: 10px;
+	max-width: 350px;
+	height: 135px;
+	border-radius: 2px;
+	padding:6px 12px;
+	display: block;
+	margin-bottom: 10px;
+	color: #555;
+	background-color: #fff;
+	border:1px solid #ccc;
+	font-family: 'Karla' ,'Century Gothic', sans-serif;
+
+}
+#profile ul li select
+{
+	margin-bottom: 10px;
+	height: 35px;
+	border-radius: 2px;
+	padding:6px 12px;
+	display: block;
+	margin-bottom: 10px;
+	color: #555;
+	background-color: #fff;
+	border:1px solid #ccc;
+	font-family: 'Karla' ,'Century Gothic', sans-serif;
+}
+#profile ul li ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    black;
+}
+#profile ul li :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    black;
+   opacity:  1;
+}
+#profile ul li ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    black;
+   opacity:  1;
+}
+#profile ul li :-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    black;
+}
+#profile ul li select.selectfloat
+{
+	float: left;
+}
+#profile ul li input.submitbutton
+{
+	background-color: #f93405;
+  	color: white;
+  	font-size: 14pt;
+  	height: 40px;
+  	border-radius: 2px;
+  	cursor: pointer;
+  	width: 80%;
+  	border:0px;
+	max-width: 350px;
+}
+#profile ul li input.submitbutton:hover
+{
+	background-color: #fb5c36;
 }
 @media screen and (min-width: 660px) {
 	header
