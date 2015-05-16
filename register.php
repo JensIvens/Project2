@@ -48,19 +48,19 @@
 			?>
 			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 				<span class="input-email-icon"><i class="fa fa-user"></i></span>
-				<input type="text" name="firstname" placeholder="First Name">
+				<input type="text" name="firstname" placeholder="First Name" required>
 				
 				<span class="input-email-icon"><i class="fa fa-user"></i></span>
-				<input type="text" name="lastname" placeholder="Last Name">
+				<input type="text" name="lastname" placeholder="Last Name" required>
 
 				<span class="input-email-icon"><i class="fa fa-envelope-o fa-fw"></i></span>
-				<input type="email" name="email" placeholder="Email">
+				<input type="email" name="email" placeholder="Email" required>
 
 				<span class="input-email-icon"><i class="fa fa-lock"></i></span>
-				<input type="password" name="password" placeholder="Password">
+				<input type="password" name="password" placeholder="Password" required>
 
 				<span class="input-email-icon"><i class="fa fa-lock"></i></span>
-				<input type="password" placeholder="Confirm Password">
+				<input type="password" placeholder="Confirm Password" required>
 
 				 <p class="keeploggedin">
 	    			<input type="checkbox" id="keep" />
