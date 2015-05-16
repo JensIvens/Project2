@@ -1,9 +1,9 @@
 <?php 
 	
 	session_start();
-	if(isset($_SESSION['ownerIdentity']))
+	if(isset($_SESSION['userid']))
 	{
-		unset($_SESSION['ownerIdentity']);
+		unset($_SESSION['userid']);
 		session_write_close();
 		header("location: login.php");
 	}

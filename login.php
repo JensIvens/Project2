@@ -21,7 +21,6 @@
 			if(isset($_SESSION['userid']))
 			{
 				session_write_close();
-				header("location: profile.php");
 			}
 		}
 	}
