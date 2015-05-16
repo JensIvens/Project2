@@ -7,8 +7,12 @@
  	}
  	else
  	{
+ 		include_once('classes/User.class.php');
+		$user = new User();
  		$ownerID = $_SESSION['userid'];
  		echo $ownerID;
+		$userName = $user->getAllInformation($ownerID);
+	
  	}
 
 
@@ -30,7 +34,11 @@
 	 
 	<section id="profile">
 		<img src="images/profile.jpg">
-		<h2>Jens</h2>	
+		<?php 
+			foreach ($userName as $userInfo) { ?>
+				<h2><?php echo ucfirst($userInfo['userfirstname']); ?></h2>
+			<?php }
+		 ?>	
 		<h2 class="profile-location">Mechelen</h2>
 		<ul>
 			<li class="profile-welcome">Welcome Jens!</li>

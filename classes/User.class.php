@@ -125,6 +125,24 @@
 			}
 		}
 	}
+
+
+	public function getAllInformation($userid)
+		{
+			$db = new Db();
+			$sql = "SELECT * FROM users WHERE userid = '$userid'";
+			
+			$result = $db->conn->query($sql);
+			if($result)
+			{
+				$rows = array();
+				while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) 
+				{
+				    $rows[] = $row;
+				}
+				return $rows;
+			}
+		}
 }
 
 
