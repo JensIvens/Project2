@@ -41,7 +41,7 @@
 		 ?>	
 		<h2 class="profile-location">Mechelen</h2>
 		<ul>
-			<li class="profile-welcome">Welcome Jens!</li>
+			<li class="profile-welcome">Welcome <?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userfirstname']);} ?>!</li>
 			<li>
 				<a href="info.php">
 				Personal info
