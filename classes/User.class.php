@@ -10,6 +10,7 @@
 		private $m_sEmail;
 		private $m_sPassword;
 		private $m_sSalt = "NCSCNIDC8Z625è!èç";
+		public $errors = array();
 
 		public function __set($p_sProperty, $p_vValue)
 		{
@@ -33,7 +34,7 @@
 				{
 					throw new Exception("Password must be at least 5 characters long.");
 				}
-				$this->m_sPassword = md5($p_vValue.$this->m_sSalt);
+				$this->m_sPassword = md5($p_vValue);
 				break;
 			}
 		}
@@ -67,6 +68,7 @@
 	public function Save()
 	{
 		$db = new Db();
+
 		$sql = "insert into users 
 				(userfirstname,
 				userlastname, 
@@ -90,6 +92,39 @@
 		return $result;
 	}
 
+	public function Login($email, $password)
+	{
+		$db = new Db();
+
+		//hash the password first
+		$hashedPass = md5($password);
+
+		//check if the given email matches the given password
+		$sql = "SELECT * FROM users WHERE useremail = '$email' AND userpass = '$hashedPass'";
+
+		$result = $db->conn->query($sql);
+
+		$countRecords_Account = mysqli_num_rows($result);
+
+
+		$results = mysqli_fetch_array($result, MYSQL_ASSOC);
+
+		$userID = $results['userid'];
+		if($result)
+		{
+			//if the inputs match and only 1 record gets thrown, give him an idintification key
+			if($countRecords_Account == 1)
+			{
+				$_SESSION['userid'] = $userID;
+				header('location: profile.php');
+			}
+			//if they don't match, throw an error and no key
+			else
+			{
+				$this->errors['errorLogin'] = "Your email and/or password are wrong!";
+			}
+		}
+	}
 }
 
 
