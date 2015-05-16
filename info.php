@@ -15,7 +15,6 @@
 	
 		if(!empty($_POST['profileupdate']))
 		{
-			echo('submit!');
 			include_once("classes/UserInformation.class.php");
 			try 
 			{
@@ -93,7 +92,7 @@
 ?><!DOCTYPE html>
 <html>
 <head>
-	<title>We love bikes! - Bike</title>
+	<title>We love bikes! - Personal information</title>
 
 	<?php 
 		include('head.php');
