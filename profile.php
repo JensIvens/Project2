@@ -33,7 +33,7 @@
 	?>
 	 
 	<section id="profile">
-		<img src="images/profile.jpg">
+		<img src="images/<?php echo $ownerID . '/' ?>logo.jpg">
 		<?php 
 			foreach ($userName as $userInfo) { ?>
 				<h2><?php echo ucfirst($userInfo['userfirstname']); ?></h2>

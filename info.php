@@ -112,7 +112,8 @@
 				<h2><?php echo ucfirst($userInfo['userfirstname']); ?></h2>
 			<?php }
 		 ?>	
-		<h2 class="profile-location">Mechelen</h2>
+		<h2 class="profile-location"><?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['usercity']);} ?></h2>
+		<a href="profile.php" class="btnbackdashboard"><i class="fa fa-arrow-circle-left"></i> Dashboard</a>	
 		<ul>
 			<li class="profile-welcome">
 				Welcome <?php foreach ($userName as $userInfo) {echo ucfirst($userInfo['userfirstname']);} ?>!

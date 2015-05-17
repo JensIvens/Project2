@@ -1233,6 +1233,26 @@ ul li.profile-welcome p
 {
 	background-color: #fb5c36;
 }
+#profile a.btnbackdashboard:link,
+#profile a.btnbackdashboard:active,
+#profile a.btnbackdashboard:visited
+{
+	color: white;
+	display: block;
+	padding: 5px 10px;
+	background-color: #f93405;
+	text-decoration: none;
+	margin-top: 10px;
+	border-radius: 4px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 110px;
+}
+#profile a.btnbackdashboard:hover
+{
+	background-color: #fb5c36;
+}
 @media screen and (min-width: 660px) {
 	header
 	{
@@ -1520,6 +1540,14 @@ ul li.profile-welcome p
 		text-align: center;
 		float: left;
 		width: 120px;
+	}
+	#profile a.btnbackdashboard:link,
+	#profile a.btnbackdashboard:active,
+	#profile a.btnbackdashboard:visited
+	{
+		float: left;
+		clear: both;
+		margin-left: 0px;
 	}
 	#profile ul
 	{
