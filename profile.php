@@ -51,10 +51,10 @@
 				</a>
 			</li>
 			<li>
-				<a href="mybikes.php">
-				Bikes
+				<a href="addbike.php">
+				Add bike
 					<p>
-						Upload your bikes, change them or delete them. 
+						Upload a new bike, make money with it, and help Shift grow!
 					</p>
 				</a>
 			</li>
